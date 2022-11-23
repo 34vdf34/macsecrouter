@@ -1,2 +1,4 @@
 source "$BR2_EXTERNAL_macsecrouter_PATH/package/libnitrokey/Config.in"
 source "$BR2_EXTERNAL_macsecrouter_PATH/package/nkmacsec/Config.in"
+source "$BR2_EXTERNAL_macsecrouter_PATH/package/libblinkstick/Config.in"
+

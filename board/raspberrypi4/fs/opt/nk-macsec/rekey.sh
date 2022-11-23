@@ -33,6 +33,12 @@
 #
 
 #
+# Blinkstick. Uncomment if you have blinkstick and libblinkstick selected to build.
+#
+
+# /bin/blinkstick-cli --color 255 0 0
+
+#
 # Rekey macsec to Nitrokey
 #
 # This is role of RPi only as it's macsec router
@@ -75,6 +81,13 @@ cat /opt/nk-macsec/ready.txt > /dev/ttyAMA0
 # Optional, uncomment this to remove macsec.sh after it's run:
 #
 # rm /opt/nk-macsec/macsec.sh
+
+#
+# Blinkstick. Uncomment if you have blinkstick and libblinkstick selected to build.
+#
+# blinkstick-cli --color 0 255 0
+# sleep 10
+# blinkstick-cli --color 0 0 0
 
 exit 0
 
