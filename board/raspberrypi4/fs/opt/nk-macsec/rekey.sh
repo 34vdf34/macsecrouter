@@ -45,6 +45,7 @@
 #
 # Since '-o' and '-r' is not used, nk-macsec generates script
 # without 'sudo' and 'routing' commands. This is what RPi requires.
+# Option -m [interface] defines msquerade interface.
 #
 
 /bin/nk-macsec -p 123456 -g -i eth0 -m wg0 > /opt/nk-macsec/macsec.sh
@@ -64,10 +65,16 @@ chmod +x /opt/nk-macsec/macsec.sh
 # /opt/nk-macsec/default-route.sh
 
 #
+# Display banner to serial port after rekey is complete
+#
+
+echo -e "\033c" > /dev/ttyAMA0
+cat /opt/nk-macsec/ready.txt > /dev/ttyAMA0
+
+#
 # Optional, uncomment this to remove macsec.sh after it's run:
 #
 # rm /opt/nk-macsec/macsec.sh
-
 
 exit 0
 
