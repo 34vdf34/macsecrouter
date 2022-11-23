@@ -10,7 +10,7 @@ To build macsec router firmware, you need to install Buildroot environment and c
 mkdir ~/build-directory
 cd ~/build-directory
 git clone https://git.buildroot.net/buildroot
-git clone https://github.com/resiliencetheatre/macsecrouter
+git clone https://codeberg.org/48554e6d/macsecrouter.git
 ```
 
 Define _external tree_ location to **BR2_EXTERNAL** variable:
